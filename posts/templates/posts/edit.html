@@ -1,0 +1,31 @@
+{%extends 'main.html'%}
+
+{%block content%}
+<form action="" method="post">
+    {%csrf_token%}
+    <div class="mb-3">
+        <label for="" class="form-label">title </label>
+        <input type="text" name="title" value="{{post.title}}" class="form-control" id="" placeholder="">
+      </div>
+    
+    
+      <div class="mb-3">
+        <label for="" class="form-label">author</label>
+        <input type="text"  name="author" value="{{post.author}} "class="form-control" id="" placeholder="">
+      </div>
+    
+    
+      <div class="mb-3">
+        <label for="" class="form-label">imageUrl</label>
+        <input type="text"name="imageUrl" value="{{post.imageUrl}}" class="form-control" id="" placeholder="">
+      </div>
+    
+      <div class="mb-3">
+        <label class="form-label">Body</label>
+        <textarea class="form-control" name="body" rows="3">{{post.body}}</textarea>
+    </div>
+      <div>
+        <input type="submit" class="btn btn-primary" value="יצירה" />
+      </div>
+</form>
+  {%endblock%}

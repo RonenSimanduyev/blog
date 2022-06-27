@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h3>New Post</h3>
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" name="title" class="form-control" placeholder="Title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text" name="author" class="form-control" placeholder="Author">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Image</label>
+        <input type="text" name="imageUrl" class="form-control" placeholder="Image Url">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Body</label>
+        <textarea class="form-control" name="body" rows="3"></textarea>
+    </div>
+    <input type="submit" class="btn btn-primary" value="יצירה" />
+</form>
+{% endblock content %}
